@@ -53,9 +53,10 @@
         .logo-area { display: flex; align-items: center; gap: 12px; }
         .logo-area img { height: 42px; width: auto; object-fit: contain; }
         .logo-area span { color: #f8fafc; font-size: 22px; font-weight: bold; letter-spacing: 0.5px; }
-        nav ul { list-style: none; display: flex; gap: 25px; }
+        nav ul { list-style: none; display: flex; gap: 20px; align-items: center; }
         nav ul li a { color: #cbd5e1; text-decoration: none; font-size: 15px; font-weight: 500; transition: 0.3s; }
         nav ul li a:hover { color: #d4af37; }
+        .portal-btn { background: #d4af37 !important; color: #000 !important; padding: 6px 14px; border-radius: 4px; font-weight: bold; }
 
         /* Hero Section with Background Video */
         header { 
@@ -162,14 +163,34 @@
         .service-card ul { list-style: disc; padding-left: 20px; color: #cbd5e1; font-size: 14px; }
         .service-card ul li { margin-bottom: 6px; }
 
-        /* Founder Section (Enlarged Profile Picture) */
+        /* Founder Section */
         .founder-container { display: flex; justify-content: center; align-items: center; }
-        .founder-card { background: #1e293b; border-radius: 15px; padding: 45px; max-width: 480px; text-align: center; border: 1px solid #334155; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .founder-card { background: #1e293b; border-radius: 15px; padding: 45px; max-width: 480px; width: 100%; text-align: center; border: 1px solid #334155; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
         .founder-card img { width: 220px; height: 220px; border-radius: 50%; object-fit: cover; margin-bottom: 20px; border: 4px solid #d4af37; }
         .founder-card h3 { font-size: 24px; color: #fff; margin-bottom: 4px; }
         .founder-card .quals { font-size: 14px; color: #cbd5e1; margin-bottom: 10px; font-weight: 500; }
         .founder-card .role { font-size: 16px; color: #d4af37; font-weight: bold; margin-bottom: 15px; }
         .founder-card .desc { color: #94a3b8; font-size: 14px; line-height: 1.6; }
+
+        /* Staff Grid Section */
+        .staff-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .staff-card { background: #1e293b; border-radius: 15px; padding: 35px; text-align: center; border: 1px solid #334155; box-shadow: 0 10px 30px rgba(0,0,0,0.3); transition: 0.3s; }
+        .staff-card:hover { transform: translateY(-5px); border-color: #d4af37; box-shadow: 0 10px 25px rgba(212,175,55,0.1); }
+        .staff-card img { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 20px; border: 3px solid #d4af37; }
+        .staff-card h3 { font-size: 22px; color: #fff; margin-bottom: 4px; }
+        .staff-card .quals { font-size: 13px; color: #cbd5e1; margin-bottom: 8px; font-weight: 500; }
+        .staff-card .role { font-size: 15px; color: #d4af37; font-weight: bold; margin-bottom: 12px; }
+        .staff-card .desc { color: #94a3b8; font-size: 13px; line-height: 1.6; }
+
+        /* Client Login / Portal Access Form Section */
+        .portal-section { background: linear-gradient(135deg, #1e293b, #0f172a); border: 1px solid #334155; padding: 45px; border-radius: 15px; max-width: 650px; margin: 0 auto; box-shadow: 0 15px 35px rgba(0,0,0,0.4); }
+        .portal-form { display: flex; flex-direction: column; gap: 20px; }
+        .form-group { text-align: left; }
+        .form-group label { display: block; font-size: 14px; color: #cbd5e1; margin-bottom: 8px; font-weight: 500; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px 16px; background: #0f172a; border: 1px solid #475569; border-radius: 6px; color: #fff; font-size: 15px; outline: none; transition: 0.3s; }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: #d4af37; box-shadow: 0 0 8px rgba(212, 175, 55, 0.2); }
+        .submit-btn { background: #d4af37; color: #000; padding: 14px; border: none; border-radius: 6px; font-size: 16px; font-weight: bold; cursor: pointer; transition: 0.3s; width: 100%; }
+        .submit-btn:hover { background: #b4912b; }
 
         /* Contact Section */
         .contact-box { background: #1e293b; padding: 40px; border-radius: 12px; max-width: 600px; margin: 0 auto; text-align: center; border: 1px solid #334155; }
@@ -204,6 +225,8 @@
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#founder">Founder</a></li>
+                <li><a href="#staff">Staff</a></li>
+                <li><a href="#portal" class="portal-btn">Client Portal</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -224,7 +247,7 @@
             <h1>VR Designs India Pvt Ltd</h1>
             <p class="tagline">Shaping Ideas Into Reality</p>
             <p class="sub-desc">Delivering high-precision Building Information Modeling (BIM), Advanced Surveying, Structural Engineering, and Architectural Solutions.</p>
-            <a href="#contact" class="btn">Get in Touch</a>
+            <a href="#portal" class="btn">Client Service Portal</a>
         </div>
     </header>
 
@@ -296,6 +319,86 @@
                     Expertise in Building Information Modeling (BIM), structural engineering, advanced surveying, and architectural modeling solutions. Dedicated to delivering high-precision engineering projects with uncompromising quality.
                 </p>
             </div>
+        </div>
+    </section>
+
+    <!-- Staff Section -->
+    <section id="staff">
+        <h2 class="section-title">Our Expert Team</h2>
+        <div class="staff-grid">
+            
+            <!-- Staff Member 1 -->
+            <div class="staff-card">
+                <img src="staff1.jpeg" alt="Staff Member 1">
+                <h3>Staff Name 1</h3>
+                <div class="quals">(B.TECH, CIVIL)</div>
+                <div class="role">Senior BIM Modeler</div>
+                <p class="desc">
+                    Specialized in Revit 3D parametric modeling, clash detection, and multidisciplinary coordination for engineering projects.
+                </p>
+            </div>
+
+            <!-- Staff Member 2 -->
+            <div class="staff-card">
+                <img src="staff2.jpeg" alt="Staff Member 2">
+                <h3>Staff Name 2</h3>
+                <div class="quals">(D.C.E)</div>
+                <div class="role">Advanced Survey Engineer</div>
+                <p class="desc">
+                    Expert in Total Station and DGPS precision land surveying, layout marking, and site execution monitoring.
+                </p>
+            </div>
+
+            <!-- Staff Member 3 -->
+            <div class="staff-card">
+                <img src="staff3.jpeg" alt="Staff Member 3">
+                <h3>Staff Name 3</h3>
+                <div class="quals">(B.TECH)</div>
+                <div class="role">Structural Design Engineer</div>
+                <p class="desc">
+                    Experienced in RCC & steel structural analysis, detailed estimations, and structural safety compliance checks.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Client Portal / Service Access Section -->
+    <section id="portal">
+        <h2 class="section-title">Client Service Portal & Inquiry</h2>
+        <div class="portal-section">
+            <p style="text-align: center; color: #94a3b8; margin-bottom: 25px; font-size: 15px;">
+                Please log in with your email or phone number to submit project requirements or request our professional engineering services.
+            </p>
+            <form class="portal-form" action="https://formspree.io/f/your-form-id" method="POST">
+                <div class="form-group">
+                    <label for="client-name">Full Name / Company Name</label>
+                    <input type="text" id="client-name" name="name" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="client-email">Email Address</label>
+                    <input type="email" id="client-email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="client-phone">Phone Number</label>
+                    <input type="tel" id="client-phone" name="phone" placeholder="Enter your phone number" required>
+                </div>
+                <div class="form-group">
+                    <label for="service-select">Select Required Service</label>
+                    <select id="service-select" name="service" required>
+                        <option value="">-- Choose a Service --</option>
+                        <option value="BIM Modeling">BIM Modeling (Revit)</option>
+                        <option value="Advanced Surveying">Advanced Surveying & DGPS / Total Station</option>
+                        <option value="Structural Design">Architectural & Structural Design</option>
+                        <option value="Other Consultation">General Engineering Consultation</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="client-message">Project Details / Requirements</label>
+                    <textarea id="client-message" name="message" rows="4" placeholder="Briefly describe your project requirements..." required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Submit Service Request</button>
+            </form>
         </div>
     </section>
 
