@@ -52,8 +52,8 @@
         }
         .logo-area { display: flex; align-items: center; gap: 12px; }
         .logo-area img { height: 42px; width: auto; object-fit: contain; }
-        .logo-area span { color: #f8fafc; font-size: 22px; font-weight: bold; letter-spacing: 0.5px; }
-        nav ul { list-style: none; display: flex; gap: 20px; align-items: center; }
+        .logo-area span { color: #d4af37; font-size: 22px; font-weight: bold; letter-spacing: 0.5px; }
+        nav ul { list-style: none; display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
         nav ul li a { color: #cbd5e1; text-decoration: none; font-size: 15px; font-weight: 500; transition: 0.3s; }
         nav ul li a:hover { color: #d4af37; }
         .portal-btn { background: #d4af37 !important; color: #000 !important; padding: 6px 14px; border-radius: 4px; font-weight: bold; }
@@ -182,8 +182,8 @@
         .staff-card .role { font-size: 15px; color: #d4af37; font-weight: bold; margin-bottom: 12px; }
         .staff-card .desc { color: #94a3b8; font-size: 13px; line-height: 1.6; }
 
-        /* Client Login / Portal Access Form Section */
-        .portal-section { background: linear-gradient(135deg, #1e293b, #0f172a); border: 1px solid #334155; padding: 45px; border-radius: 15px; max-width: 650px; margin: 0 auto; box-shadow: 0 15px 35px rgba(0,0,0,0.4); }
+        /* Client Portal & Online Payment Section */
+        .portal-section { background: linear-gradient(135deg, #1e293b, #0f172a); border: 1px solid #334155; padding: 45px; border-radius: 15px; max-width: 650px; margin: 0 auto; box-shadow: 0 15px 35px rgba(0,0,0,0.4); text-align: center; }
         .portal-form { display: flex; flex-direction: column; gap: 20px; }
         .form-group { text-align: left; }
         .form-group label { display: block; font-size: 14px; color: #cbd5e1; margin-bottom: 8px; font-weight: 500; }
@@ -191,6 +191,13 @@
         .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: #d4af37; box-shadow: 0 0 8px rgba(212, 175, 55, 0.2); }
         .submit-btn { background: #d4af37; color: #000; padding: 14px; border: none; border-radius: 6px; font-size: 16px; font-weight: bold; cursor: pointer; transition: 0.3s; width: 100%; }
         .submit-btn:hover { background: #b4912b; }
+
+        /* Online Payment UPI Styling */
+        .payment-divider { margin: 30px 0 20px; border-top: 1px solid #334155; padding-top: 25px; }
+        .payment-btn { background: #10b981; color: #fff; padding: 14px 28px; border-radius: 6px; font-size: 16px; font-weight: bold; text-decoration: none; display: inline-block; transition: 0.3s; width: 100%; text-align: center; }
+        .payment-btn:hover { background: #059669; transform: translateY(-2px); }
+        .upi-id-text { margin-top: 10px; font-size: 14px; color: #cbd5e1; }
+        .upi-id-text span { color: #d4af37; font-weight: bold; }
 
         /* Contact Section */
         .contact-box { background: #1e293b; padding: 40px; border-radius: 12px; max-width: 600px; margin: 0 auto; text-align: center; border: 1px solid #334155; }
@@ -247,7 +254,7 @@
             <h1>VR Designs India Pvt Ltd</h1>
             <p class="tagline">Shaping Ideas Into Reality</p>
             <p class="sub-desc">Delivering high-precision Building Information Modeling (BIM), Advanced Surveying, Structural Engineering, and Architectural Solutions.</p>
-            <a href="#portal" class="btn">Client Service Portal</a>
+            <a href="#portal" class="btn">Client Service Portal & Pay</a>
         </div>
     </header>
 
@@ -363,12 +370,12 @@
         </div>
     </section>
 
-    <!-- Client Portal / Service Access Section -->
+    <!-- Client Portal / Service Access & UPI Payment Section -->
     <section id="portal">
-        <h2 class="section-title">Client Service Portal & Inquiry</h2>
+        <h2 class="section-title">Client Service Portal & Online Payment</h2>
         <div class="portal-section">
-            <p style="text-align: center; color: #94a3b8; margin-bottom: 25px; font-size: 15px;">
-                Please log in with your email or phone number to submit project requirements or request our professional engineering services.
+            <p style="color: #94a3b8; margin-bottom: 25px; font-size: 15px;">
+                Submit your service inquiry below, or pay securely using direct UPI transfer.
             </p>
             <form class="portal-form" action="https://formspree.io/f/your-form-id" method="POST">
                 <div class="form-group">
@@ -399,6 +406,15 @@
                 </div>
                 <button type="submit" class="submit-btn">Submit Service Request</button>
             </form>
+
+            <!-- Direct UPI Payment Section -->
+            <div class="payment-divider">
+                <p style="color: #cbd5e1; margin-bottom: 12px; font-size: 15px; font-weight: 500;">Pay via UPI App (GPay / PhonePe / Paytm / SBI):</p>
+                <a href="upi://pay?pa=ramtenkivilas001@oksbi&pn=VR%20Designs%20India%20Pvt%20Ltd&cu=INR" class="payment-btn">⚡ Pay via UPI App</a>
+                <div class="upi-id-text">
+                    UPI ID: <span>ramtenkivilas001@oksbi</span>
+                </div>
+            </div>
         </div>
     </section>
 
