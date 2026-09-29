@@ -61,24 +61,21 @@
         header { 
             position: relative;
             min-height: 100vh; 
-            overflow: hidden;
             display: flex; 
             align-items: center; 
             justify-content: center; 
             text-align: center; 
             padding: 120px 20px 40px; 
+            overflow: hidden;
         }
         .hero-video {
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            z-index: 1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             object-fit: cover;
+            z-index: 1;
         }
         .hero-overlay {
             position: absolute;
@@ -86,7 +83,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(rgba(15,23,42,0.80), rgba(15,23,42,0.92));
+            background: linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.95));
             z-index: 2;
         }
         .hero-content {
@@ -175,9 +172,10 @@
         .founder-card .desc { color: #94a3b8; font-size: 14px; line-height: 1.6; }
 
         /* Contact Section */
-        .contact-box { background: #1e293b; padding: 40px; border-radius: 12px; max-width: 600px; margin: 0 auto; text-align: center; border: 1px solid #334155; }
-        .contact-box p { font-size: 18px; margin-bottom: 15px; color: #cbd5e1; }
+        .contact-box { background: #1e293b; padding: 40px; border-radius: 12px; max-width: 750px; margin: 0 auto; text-align: left; border: 1px solid #334155; }
+        .contact-box p { font-size: 16px; margin-bottom: 12px; color: #cbd5e1; }
         .contact-box a { color: #d4af37; text-decoration: none; font-weight: bold; }
+        .contact-box h3 { color: #d4af37; font-size: 18px; margin-top: 20px; margin-bottom: 8px; border-bottom: 1px solid #334155; padding-bottom: 5px; }
 
         /* Footer */
         footer { background: #020617; text-align: center; padding: 30px; color: #64748b; border-top: 1px solid #1e293b; font-size: 14px; }
@@ -214,11 +212,12 @@
         <!-- Background Video -->
         <video autoplay muted loop playsinline class="hero-video">
             <source src="intro.mp4" type="video/mp4">
+            Your browser does not support the video tag.
         </video>
-        <!-- Dark Overlay for Text Readability -->
+        <!-- Dark Overlay for text clarity -->
         <div class="hero-overlay"></div>
-
-        <!-- Content -->
+        
+        <!-- Hero Text Content -->
         <div class="hero-content">
             <h1>VR Designs India Pvt Ltd</h1>
             <p class="tagline">Shaping Ideas Into Reality</p>
@@ -287,7 +286,7 @@
         <h2 class="section-title">Founder Details</h2>
         <div class="founder-container">
             <div class="founder-card">
-                <img src="profile-pic.jpg" alt="Ramtenki Vilas">
+                <img src="profile-pic.jpeg" alt="Ramtenki Vilas">
                 <h3>Ramtenki Vilas</h3>
                 <div class="quals">(D.C.E, B.TECH, M.TECH)</div>
                 <div class="role">Founder & BIM / Structural Professional</div>
@@ -302,8 +301,14 @@
     <section id="contact">
         <h2 class="section-title">Contact Us</h2>
         <div class="contact-box">
-            <p>Email: <a href="mailto:vilascivil2@gmail.com">vilascivil2@gmail.com</a></p>
-            <p>Phone: <a href="tel:+919948825210">+91 99488 25210</a></p>
+            <p><strong>Email:</strong> <a href="mailto:vilascivil2@gmail.com">vilascivil2@gmail.com</a></p>
+            <p><strong>Phone:</strong> <a href="tel:+919948825210">+91 99488 25210</a></p>
+            
+            <h3>Corporate / Branch Office Address</h3>
+            <p>Plot No 1/C, Sy No 83/1, Raidurgam, Knowledge City Road, Hyderabad, Telangana 500081 (T-Hub Phase 1)[cite: 7]</p>
+            
+            <h3>Company Registration Address</h3>
+            <p>H.No. 2-45, Village Dhorpalli, Mandal Sirpur Town, District Komrambhim Asifabad, PIN: 504299</p>
         </div>
     </section>
 
