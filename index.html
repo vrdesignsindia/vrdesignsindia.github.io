@@ -53,7 +53,7 @@
         .logo-area { display: flex; align-items: center; gap: 10px; }
         .logo-area img { height: 38px; width: auto; object-fit: contain; }
         .logo-area span { color: #d4af37; font-size: 20px; font-weight: bold; letter-spacing: 0.5px; }
-        nav ul { list-style: none; display: flex; gap: 18px; align-items: center; flex-wrap: wrap; }
+        nav ul { list-style: none; display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
         nav ul li a { color: #cbd5e1; text-decoration: none; font-size: 14px; font-weight: 500; transition: 0.3s; }
         nav ul li a:hover { color: #d4af37; }
         .portal-btn { background: #d4af37 !important; color: #000 !important; padding: 6px 12px; border-radius: 4px; font-weight: bold; }
@@ -183,6 +183,18 @@
         .staff-card .role { font-size: 15px; color: #d4af37; font-weight: bold; margin-bottom: 12px; }
         .staff-card .desc { color: #94a3b8; font-size: 13px; line-height: 1.6; }
 
+        /* Careers / Vacancies Section */
+        .careers-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-bottom: 40px; }
+        .career-card { background: #1e293b; border-radius: 12px; padding: 30px; border: 1px solid #334155; box-shadow: 0 10px 30px rgba(0,0,0,0.3); transition: 0.3s; }
+        .career-card:hover { border-color: #d4af37; transform: translateY(-5px); }
+        .career-card h3 { font-size: 21px; color: #d4af37; margin-bottom: 10px; }
+        .career-card .job-meta { font-size: 13px; color: #94a3b8; margin-bottom: 15px; font-weight: 500; }
+        .career-card p { font-size: 14px; color: #cbd5e1; margin-bottom: 15px; }
+        .career-card ul { list-style: disc; padding-left: 20px; color: #94a3b8; font-size: 13px; margin-bottom: 20px; }
+        .career-card ul li { margin-bottom: 5px; }
+        .apply-btn { background: #d4af37; color: #000; padding: 10px 20px; border-radius: 5px; font-size: 14px; font-weight: bold; text-decoration: none; display: inline-block; transition: 0.3s; }
+        .apply-btn:hover { background: #b4912b; }
+
         /* Client Portal & Online Payment Section */
         .portal-section { background: linear-gradient(135deg, #1e293b, #0f172a); border: 1px solid #334155; padding: 35px 25px; border-radius: 15px; max-width: 650px; margin: 0 auto; box-shadow: 0 15px 35px rgba(0,0,0,0.4); text-align: center; }
         .portal-form { display: flex; flex-direction: column; gap: 18px; }
@@ -214,9 +226,9 @@
 
         /* Mobile Responsive Media Queries */
         @media (max-width: 768px) {
-            .top-bar { display: none; } /* Hide top bar on mobile to save vertical space */
+            .top-bar { display: none; }
             nav { padding: 12px 4%; flex-direction: column; gap: 10px; }
-            nav ul { gap: 12px; justify-content: center; font-size: 13px; }
+            nav ul { gap: 10px; justify-content: center; font-size: 13px; }
             header { padding: 140px 15px 40px; }
             header h1 { font-size: 32px; }
             header .tagline { font-size: 14px; }
@@ -235,7 +247,7 @@
     <div class="header-wrapper">
         <!-- Top Bar -->
         <div class="top-bar">
-            <a href="mailto:vilascivil2@gmail.com">✉️️ vilascivil2@gmail.com</a>
+            <a href="mailto:vilascivil2@gmail.com">✉ vilascivil2@gmail.com</a>
             <a href="tel:+919948825210">📞 +91 99488 25210</a>
         </div>
 
@@ -251,6 +263,7 @@
                 <li><a href="#services">Services</a></li>
                 <li><a href="#founder">Founder</a></li>
                 <li><a href="#staff">Staff</a></li>
+                <li><a href="#careers">Careers</a></li>
                 <li><a href="#portal" class="portal-btn">Client Portal</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -354,8 +367,8 @@
             
             <!-- Staff Member 1 -->
             <div class="staff-card">
-                <img src="staff1.jpeg" alt="Staff Member 1">
-                <h3>Staff Name 1</h3>
+                <img src="sulthan-venkatesh.jpeg" alt="Sulthan Venkatesh">
+                <h3>Sulthan Venkatesh</h3>
                 <div class="quals">(B.TECH, CIVIL)</div>
                 <div class="role">Senior BIM Modeler</div>
                 <p class="desc">
@@ -365,8 +378,8 @@
 
             <!-- Staff Member 2 -->
             <div class="staff-card">
-                <img src="staff2.jpeg" alt="Staff Member 2">
-                <h3>Staff Name 2</h3>
+                <img src="shiva-prasad.jpeg" alt="Shiva Prasad">
+                <h3>Shiva Prasad</h3>
                 <div class="quals">(D.C.E)</div>
                 <div class="role">Advanced Survey Engineer</div>
                 <p class="desc">
@@ -376,13 +389,63 @@
 
             <!-- Staff Member 3 -->
             <div class="staff-card">
-                <img src="staff3.jpeg" alt="Staff Member 3">
-                <h3>Staff Name 3</h3>
+                <img src="ramavath-suresh.jpeg" alt="Ramavath Suresh">
+                <h3>Ramavath Suresh</h3>
                 <div class="quals">(B.TECH)</div>
                 <div class="role">Structural Design Engineer</div>
                 <p class="desc">
                     Experienced in RCC & steel structural analysis, detailed estimations, and structural safety compliance checks.
                 </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Careers / Job Vacancies Section -->
+    <section id="careers">
+        <h2 class="section-title">Career Opportunities</h2>
+        <p style="text-align: center; color: #94a3b8; max-width: 700px; margin: 0 auto 40px; font-size: 15px;">
+            Join our growing team of engineering and BIM professionals at <strong style="color: #d4af37;">VR Designs India Pvt Ltd</strong>. Explore our current open positions below.
+        </p>
+        <div class="careers-grid">
+            
+            <!-- Job Opening 1 -->
+            <div class="career-card">
+                <h3>BIM Engineer / Modeler (Revit)</h3>
+                <div class="job-meta">📍 T-Hub, Gachibouli, Hyderabad | Full-Time</div>
+                <p>We are looking for experienced BIM professionals skilled in Autodesk Revit architecture & structural modeling.</p>
+                <ul>
+                    <li>Minimum 1-3 years experience in Revit BIM modeling.</li>
+                    <li>Strong knowledge in clash detection & family creation.</li>
+                    <li>Scan-to-BIM & point cloud processing experience is a plus.</li>
+                </ul>
+                <a href="mailto:vilascivil2@gmail.com?subject=Job Application: BIM Engineer - [Your Name]" class="apply-btn">Apply Now via Email</a>
+            </div>
+
+            <!-- Job Opening 2 -->
+            <div class="career-card">
+                <h3>Advanced Survey Engineer</h3>
+                <div class="job-meta">📍 Hyderabad & Site Locations | Full-Time</div>
+                <p>Seeking skilled survey engineers proficient in high-precision ground layout and geospatial mapping.</p>
+                <ul>
+                    <li>Expertise in Total Station and DGPS equipment operation.</li>
+                    <li>Ability to handle large-scale layout surveys and leveling.</li>
+                    <li>Diploma or Degree in Civil Engineering (D.C.E / B.Tech).</li>
+                </ul>
+                <a href="mailto:vilascivil2@gmail.com?subject=Job Application: Survey Engineer - [Your Name]" class="apply-btn">Apply Now via Email</a>
+            </div>
+
+            <!-- Job Opening 3 -->
+            <div class="career-card">
+                <h3>Structural Design Engineer</h3>
+                <div class="job-meta">📍 T-Hub, Gachibouli, Hyderabad | Full-Time</div>
+                <p>Looking for structural engineers capable of handling analysis, calculations, and execution drawings.</p>
+                <ul>
+                    <li>Proficiency in RCC and Steel structural calculations.</li>
+                    <li>B.Tech / M.Tech in Structural Engineering.</li>
+                    <li>Familiarity with STAAD.Pro, AutoCAD, and Revit Structure.</li>
+                </ul>
+                <a href="mailto:vilascivil2@gmail.com?subject=Job Application: Structural Engineer - [Your Name]" class="apply-btn">Apply Now via Email</a>
             </div>
 
         </div>
