@@ -50,9 +50,12 @@
             padding: 12px 5%; 
             border-bottom: 1px solid #1e293b; 
         }
-        .logo-area { display: flex; align-items: center; gap: 10px; }
-        .logo-area img { height: 38px; width: auto; object-fit: contain; }
-        .logo-area span { color: #d4af37; font-size: 20px; font-weight: bold; letter-spacing: 0.5px; }
+        .logo-area { display: flex; align-items: center; gap: 12px; }
+        .logo-area img { height: 40px; width: auto; object-fit: contain; }
+        .logo-text-group { display: flex; flex-direction: column; }
+        .logo-area span { color: #d4af37; font-size: 19px; font-weight: bold; letter-spacing: 0.5px; line-height: 1.2; }
+        .logo-tagline { font-size: 10px; color: #cbd5e1; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 600; }
+        
         nav ul { list-style: none; display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
         nav ul li a { color: #cbd5e1; text-decoration: none; font-size: 14px; font-weight: 500; transition: 0.3s; }
         nav ul li a:hover { color: #d4af37; }
@@ -66,7 +69,7 @@
             align-items: center; 
             justify-content: center; 
             text-align: center; 
-            padding: 130px 20px 50px; 
+            padding: 140px 20px 50px; 
             overflow: hidden;
         }
         .hero-video {
@@ -84,7 +87,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.95));
+            background: linear-gradient(rgba(15,23,42,0.8), rgba(15,23,42,0.92));
             z-index: 2;
         }
         .hero-content {
@@ -93,23 +96,14 @@
             max-width: 900px;
         }
         header h1 { 
-            font-size: 46px; 
+            font-size: 44px; 
             color: #d4af37; 
             margin-bottom: 15px; 
             font-weight: 800; 
             letter-spacing: 1px;
-            text-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
-        }
-        header .tagline { 
-            font-size: 18px; 
-            color: #cbd5e1; 
-            margin-bottom: 12px; 
-            font-weight: 600; 
-            letter-spacing: 2px; 
-            text-transform: uppercase; 
         }
         header .sub-desc { 
-            font-size: 15px; 
+            font-size: 16px; 
             color: #94a3b8; 
             margin-bottom: 30px; 
             max-width: 750px; 
@@ -183,7 +177,7 @@
         .staff-card .role { font-size: 15px; color: #d4af37; font-weight: bold; margin-bottom: 12px; }
         .staff-card .desc { color: #94a3b8; font-size: 13px; line-height: 1.6; }
 
-        /* Careers / Vacancies Section */
+        /* Careers / Job Vacancies Section */
         .careers-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-bottom: 40px; }
         .career-card { background: #1e293b; border-radius: 12px; padding: 30px; border: 1px solid #334155; box-shadow: 0 10px 30px rgba(0,0,0,0.3); transition: 0.3s; }
         .career-card:hover { border-color: #d4af37; transform: translateY(-5px); }
@@ -230,9 +224,7 @@
             nav { padding: 12px 4%; flex-direction: column; gap: 10px; }
             nav ul { gap: 10px; justify-content: center; font-size: 13px; }
             header { padding: 140px 15px 40px; }
-            header h1 { font-size: 32px; }
-            header .tagline { font-size: 14px; }
-            header .sub-desc { font-size: 14px; }
+            header h1 { font-size: 30px; }
             section { padding: 60px 4%; }
             .section-title { font-size: 26px; margin-bottom: 30px; }
             .founder-card { padding: 30px 20px; }
@@ -255,7 +247,10 @@
         <nav>
             <div class="logo-area">
                 <img src="logo.png" alt="VR Designs Logo">
-                <span>VR Designs India Pvt Ltd</span>
+                <div class="logo-text-group">
+                    <span>VR Designs India Pvt Ltd</span>
+                    <span class="logo-tagline">Shaping Ideas Into Reality</span>
+                </div>
             </div>
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -263,7 +258,7 @@
                 <li><a href="#services">Services</a></li>
                 <li><a href="#founder">Founder</a></li>
                 <li><a href="#staff">Staff</a></li>
-                <li><a href="#careers">Careers</a></li>
+                <li><a href="#careers">Careers (Vacancies)</a></li>
                 <li><a href="#portal" class="portal-btn">Client Portal</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -282,9 +277,8 @@
         
         <!-- Hero Text Content -->
         <div class="hero-content">
-            <h1>VR Designs India Pvt Ltd</h1>
-            <p class="tagline">Shaping Ideas Into Reality</p>
-            <p class="sub-desc">Delivering high-precision Building Information Modeling (BIM), Advanced Surveying, Structural Engineering, and Architectural Solutions.</p>
+            <h1>Delivering High-Precision Engineering Solutions</h1>
+            <p class="sub-desc">Specialized in Building Information Modeling (BIM), Advanced Surveying, Structural Design, and Architectural Excellence.</p>
             <a href="#portal" class="btn">Client Service Portal & Pay</a>
         </div>
     </header>
@@ -403,16 +397,16 @@
 
     <!-- Careers / Job Vacancies Section -->
     <section id="careers">
-        <h2 class="section-title">Career Opportunities</h2>
+        <h2 class="section-title">Career Opportunities & Job Vacancies</h2>
         <p style="text-align: center; color: #94a3b8; max-width: 700px; margin: 0 auto 40px; font-size: 15px;">
-            Join our growing team of engineering and BIM professionals at <strong style="color: #d4af37;">VR Designs India Pvt Ltd</strong>. Explore our current open positions below.
+            We have active job vacancies! Join our growing team of engineering and BIM professionals at <strong style="color: #d4af37;">VR Designs India Pvt Ltd</strong>. Explore open positions below:
         </p>
         <div class="careers-grid">
             
             <!-- Job Opening 1 -->
             <div class="career-card">
                 <h3>BIM Engineer / Modeler (Revit)</h3>
-                <div class="job-meta">📍 T-Hub, Gachibouli, Hyderabad | Full-Time</div>
+                <div class="job-meta">📍 T-Hub, Gachibouli, Hyderabad | Full-Time (Vacancies Available)</div>
                 <p>We are looking for experienced BIM professionals skilled in Autodesk Revit architecture & structural modeling.</p>
                 <ul>
                     <li>Minimum 1-3 years experience in Revit BIM modeling.</li>
@@ -425,7 +419,7 @@
             <!-- Job Opening 2 -->
             <div class="career-card">
                 <h3>Advanced Survey Engineer</h3>
-                <div class="job-meta">📍 Hyderabad & Site Locations | Full-Time</div>
+                <div class="job-meta">📍 Hyderabad & Site Locations | Full-Time (Vacancies Available)</div>
                 <p>Seeking skilled survey engineers proficient in high-precision ground layout and geospatial mapping.</p>
                 <ul>
                     <li>Expertise in Total Station and DGPS equipment operation.</li>
@@ -438,7 +432,7 @@
             <!-- Job Opening 3 -->
             <div class="career-card">
                 <h3>Structural Design Engineer</h3>
-                <div class="job-meta">📍 T-Hub, Gachibouli, Hyderabad | Full-Time</div>
+                <div class="job-meta">📍 T-Hub, Gachibouli, Hyderabad | Full-Time (Vacancies Available)</div>
                 <p>Looking for structural engineers capable of handling analysis, calculations, and execution drawings.</p>
                 <ul>
                     <li>Proficiency in RCC and Steel structural calculations.</li>
