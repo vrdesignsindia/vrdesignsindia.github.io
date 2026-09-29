@@ -57,15 +57,41 @@
         nav ul li a { color: #cbd5e1; text-decoration: none; font-size: 15px; font-weight: 500; transition: 0.3s; }
         nav ul li a:hover { color: #d4af37; }
 
-        /* Hero Section */
+        /* Hero Section with Background Video */
         header { 
+            position: relative;
             min-height: 100vh; 
-            background: linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.95)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover; 
+            overflow: hidden;
             display: flex; 
             align-items: center; 
             justify-content: center; 
             text-align: center; 
             padding: 120px 20px 40px; 
+        }
+        .hero-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: 1;
+            object-fit: cover;
+        }
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(15,23,42,0.80), rgba(15,23,42,0.92));
+            z-index: 2;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 3;
         }
         header h1 { 
             font-size: 50px; 
@@ -109,7 +135,7 @@
             text-align: center; 
             font-size: 34px; 
             margin-bottom: 45px; 
-            color: #fff; /* Single solid color for section titles */
+            color: #fff; 
             font-weight: 700; 
         }
 
@@ -183,9 +209,17 @@
         </nav>
     </div>
 
-    <!-- Hero Section -->
+    <!-- Hero Section with Background Video -->
     <header id="home">
-        <div>
+        <!-- Background Video -->
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="intro.mp4" type="video/mp4">
+        </video>
+        <!-- Dark Overlay for Text Readability -->
+        <div class="hero-overlay"></div>
+
+        <!-- Content -->
+        <div class="hero-content">
             <h1>VR Designs India Pvt Ltd</h1>
             <p class="tagline">Shaping Ideas Into Reality</p>
             <p class="sub-desc">Delivering high-precision Building Information Modeling (BIM), Advanced Surveying, Structural Engineering, and Architectural Solutions.</p>
