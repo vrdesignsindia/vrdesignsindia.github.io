@@ -24,7 +24,7 @@
             z-index: 1000;
         }
 
-        /* Top Bar - Bright White Text & Tech Cyan Icons */
+        /* Top Bar - High Visibility White */
         .top-bar {
             background: #020617;
             padding: 9px 5%;
@@ -45,14 +45,8 @@
             letter-spacing: 0.3px;
             transition: 0.3s;
         }
-        .top-bar a .top-icon {
-            color: var(--primary);
-            font-size: 14px;
-        }
-        .top-bar a:hover {
-            color: var(--primary) !important;
-            text-shadow: 0 0 10px var(--primary-glow);
-        }
+        .top-bar a .top-icon { color: var(--primary); font-size: 14px; }
+        .top-bar a:hover { color: var(--primary) !important; text-shadow: 0 0 10px var(--primary-glow); }
 
         nav { 
             display: flex; 
@@ -67,139 +61,31 @@
         .logo-area img { height: 42px; width: auto; object-fit: contain; }
         
         /* Middle Centered Logo Lockup */
-        .logo-text-group { 
-            display: flex; 
-            flex-direction: column; 
-            align-items: center;
-            text-align: center;
-        }
-        .logo-area .company-title { 
-            color: var(--primary); 
-            font-size: 19px; 
-            font-weight: 800; 
-            letter-spacing: 0.5px; 
-            line-height: 1.2; 
-            display: block;
-            text-align: center;
-        }
-        .logo-area .company-tagline { 
-            color: #f1f5f9 !important; 
-            font-size: 8.5px !important; 
-            font-weight: 600 !important; 
-            letter-spacing: 2.8px !important; 
-            text-transform: uppercase; 
-            margin-top: 3px;
-            display: block;
-            text-align: center;
-            opacity: 0.9;
-            width: 100%;
-        }
+        .logo-text-group { display: flex; flex-direction: column; align-items: center; text-align: center; }
+        .logo-area .company-title { color: var(--primary); font-size: 19px; font-weight: 800; letter-spacing: 0.5px; line-height: 1.2; display: block; text-align: center; }
+        .logo-area .company-tagline { color: #f1f5f9 !important; font-size: 8.5px !important; font-weight: 600 !important; letter-spacing: 2.8px !important; text-transform: uppercase; margin-top: 3px; display: block; text-align: center; opacity: 0.9; width: 100%; }
         
         nav ul { list-style: none; display: flex; gap: 18px; align-items: center; flex-wrap: wrap; }
         nav ul li a { color: #cbd5e1; text-decoration: none; font-size: 14px; font-weight: 500; transition: 0.3s; }
         nav ul li a:hover { color: var(--primary); }
-        .portal-btn { 
-            background: var(--primary) !important; 
-            color: #0f172a !important; 
-            padding: 7px 16px; 
-            border-radius: 6px; 
-            font-weight: 700; 
-            transition: 0.3s;
-        }
-        .portal-btn:hover {
-            background: var(--primary-hover) !important;
-            transform: translateY(-2px);
-        }
+        .portal-btn { background: var(--primary) !important; color: #0f172a !important; padding: 7px 16px; border-radius: 6px; font-weight: 700; transition: 0.3s; }
+        .portal-btn:hover { background: var(--primary-hover) !important; transform: translateY(-2px); }
 
-        header { 
-            position: relative;
-            min-height: 100vh; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            text-align: center; 
-            padding: 140px 20px 50px; 
-            overflow: hidden;
-        }
-        .hero-video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: 1;
-        }
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(rgba(15,23,42,0.82), rgba(15,23,42,0.95));
-            z-index: 2;
-        }
-        .hero-content {
-            position: relative;
-            z-index: 3;
-            max-width: 900px;
-        }
-        header h1 { 
-            font-size: 42px; 
-            color: #ffffff !important; 
-            margin-bottom: 16px; 
-            font-weight: 800; 
-            letter-spacing: 0.8px;
-            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
-        }
-        header .sub-desc { 
-            font-size: 16px; 
-            color: #94a3b8; 
-            margin-bottom: 30px; 
-            max-width: 750px; 
-            margin-left: auto; 
-            margin-right: auto; 
-        }
-        .btn { 
-            background: var(--primary); 
-            color: #0f172a; 
-            padding: 12px 32px; 
-            border-radius: 6px; 
-            font-weight: 700; 
-            text-decoration: none; 
-            transition: 0.3s; 
-            display: inline-block; 
-            box-shadow: 0 4px 15px var(--primary-glow);
-        }
-        .btn:hover { 
-            background: var(--primary-hover); 
-            transform: translateY(-2px); 
-        }
+        /* Hero */
+        header { position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 140px 20px 50px; overflow: hidden; }
+        .hero-video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; }
+        .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(15,23,42,0.82), rgba(15,23,42,0.95)); z-index: 2; }
+        .hero-content { position: relative; z-index: 3; max-width: 900px; }
+        header h1 { font-size: 42px; color: #ffffff !important; margin-bottom: 16px; font-weight: 800; letter-spacing: 0.8px; text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6); }
+        header .sub-desc { font-size: 16px; color: #94a3b8; margin-bottom: 30px; max-width: 750px; margin-left: auto; margin-right: auto; }
+        .btn { background: var(--primary); color: #0f172a; padding: 12px 32px; border-radius: 6px; font-weight: 700; text-decoration: none; transition: 0.3s; display: inline-block; box-shadow: 0 4px 15px var(--primary-glow); }
+        .btn:hover { background: var(--primary-hover); transform: translateY(-2px); }
 
         section { padding: 85px 6%; }
-        .section-title { 
-            text-align: center; 
-            font-size: 32px; 
-            margin-bottom: 40px; 
-            color: #fff; 
-            font-weight: 700; 
-        }
+        .section-title { text-align: center; font-size: 32px; margin-bottom: 40px; color: #fff; font-weight: 700; }
 
-        .about-box {
-            background: var(--card-bg);
-            padding: 35px;
-            border-radius: 12px;
-            max-width: 850px;
-            margin: 0 auto;
-            text-align: center;
-            border: 1px solid #334155;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-        }
-        .about-box p {
-            font-size: 17px;
-            color: #cbd5e1;
-            line-height: 1.8;
-        }
+        .about-box { background: var(--card-bg); padding: 35px; border-radius: 12px; max-width: 850px; margin: 0 auto; text-align: center; border: 1px solid #334155; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+        .about-box p { font-size: 17px; color: #cbd5e1; line-height: 1.8; }
 
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
         .service-card { background: var(--card-bg); padding: 32px; border-radius: 12px; border: 1px solid #334155; transition: 0.3s; }
@@ -209,29 +95,35 @@
         .service-card ul { list-style: disc; padding-left: 20px; color: #cbd5e1; font-size: 14px; }
         .service-card ul li { margin-bottom: 6px; }
 
-        /* Board of Directors Styles */
-        .founder-top-wrapper {
-            display: flex;
+        /* 2-Director Side-by-Side Symmetrical Grid */
+        .directors-dual-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(320px, 480px));
+            gap: 35px;
             justify-content: center;
-            margin-bottom: 45px;
+            max-width: 1050px;
+            margin: 0 auto;
         }
-        .founder-prominent-card {
+        .director-dual-card {
             background: linear-gradient(180deg, #1e293b 0%, #172033 100%);
             border-radius: 18px;
             padding: 42px 30px;
-            max-width: 460px;
-            width: 100%;
             text-align: center;
-            border: 2px solid var(--primary);
-            box-shadow: 0 14px 35px rgba(0,0,0,0.5), 0 0 25px var(--primary-glow);
+            border: 1px solid #334155;
+            box-shadow: 0 12px 32px rgba(0,0,0,0.4);
             display: flex;
             flex-direction: column;
             align-items: center;
             transition: 0.3s;
         }
-        .founder-prominent-card:hover {
+        .director-dual-card:hover {
             transform: translateY(-6px);
-            box-shadow: 0 16px 40px rgba(56, 189, 248, 0.35);
+            border-color: var(--primary);
+            box-shadow: 0 16px 40px var(--primary-glow);
+        }
+        .director-dual-card.founder-card {
+            border: 2px solid var(--primary);
+            box-shadow: 0 14px 35px rgba(0,0,0,0.5), 0 0 25px var(--primary-glow);
         }
         .founder-badge {
             background: var(--primary);
@@ -244,16 +136,16 @@
             text-transform: uppercase;
             margin-bottom: 15px;
         }
-        .founder-prominent-card img {
-            width: 180px;
-            height: 180px;
+        .director-dual-card img {
+            width: 175px;
+            height: 175px;
             border-radius: 50%;
             object-fit: cover;
             margin-bottom: 18px;
             border: 4px solid var(--primary);
         }
-        .founder-prominent-card h3 { 
-            font-size: 25px; 
+        .director-dual-card h3 { 
+            font-size: 24px; 
             font-weight: 800;
             letter-spacing: 0.6px;
             background: linear-gradient(135deg, #ffffff 15%, #cbd5e1 55%, #94a3b8 100%);
@@ -262,56 +154,11 @@
             margin-bottom: 4px; 
             filter: drop-shadow(0 2px 8px rgba(0,0,0,0.3));
         }
-        .founder-prominent-card .quals { font-size: 13.5px; color: #94a3b8; margin-bottom: 8px; font-weight: 500; }
-        .founder-prominent-card .role { font-size: 16px; color: var(--primary); font-weight: bold; margin-bottom: 14px; }
-        .founder-prominent-card .desc { color: #cbd5e1; font-size: 14px; line-height: 1.6; }
+        .director-dual-card .quals { font-size: 13.5px; color: #94a3b8; margin-bottom: 8px; font-weight: 500; }
+        .director-dual-card .role { font-size: 15.5px; color: var(--primary); font-weight: bold; margin-bottom: 14px; line-height: 1.4; }
+        .director-dual-card .desc { color: #cbd5e1; font-size: 14px; line-height: 1.6; }
 
-        .directors-single-row {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-            max-width: 1300px;
-            margin: 0 auto;
-        }
-        .director-card-sub {
-            background: var(--card-bg);
-            border-radius: 14px;
-            padding: 30px 18px;
-            text-align: center;
-            border: 1px solid #334155;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.35);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            transition: 0.3s;
-        }
-        .director-card-sub:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary);
-            box-shadow: 0 12px 30px var(--primary-glow);
-        }
-        .director-card-sub img {
-            width: 135px;
-            height: 135px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 16px;
-            border: 3px solid var(--primary);
-        }
-        .director-card-sub h3 { 
-            font-size: 20px; 
-            font-weight: 700;
-            letter-spacing: 0.4px;
-            background: linear-gradient(135deg, #ffffff 15%, #cbd5e1 60%, #94a3b8 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 6px; 
-            filter: drop-shadow(0 2px 6px rgba(0,0,0,0.25));
-        }
-        .director-card-sub .role { font-size: 13.5px; color: var(--primary); font-weight: bold; margin-bottom: 12px; line-height: 1.4; }
-        .director-card-sub .desc { color: #cbd5e1; font-size: 13px; line-height: 1.55; }
-
-        /* Careers, Portal & Contact Styles */
+        /* Careers, Portal & Contact */
         .careers-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-bottom: 40px; }
         .career-card { background: var(--card-bg); border-radius: 12px; padding: 30px; border: 1px solid #334155; box-shadow: 0 10px 30px rgba(0,0,0,0.3); transition: 0.3s; position: relative; }
         .career-card:hover { border-color: var(--primary); transform: translateY(-5px); }
@@ -349,9 +196,6 @@
         footer .footer-address span { color: var(--primary); font-weight: 600; }
         footer .copyright { margin-top: 12px; font-weight: 600; color: #94a3b8; font-size: 13px; }
 
-        @media (max-width: 1024px) {
-            .directors-single-row { grid-template-columns: repeat(2, 1fr); }
-        }
         @media (max-width: 768px) {
             .top-bar { display: none; }
             nav { padding: 12px 4%; flex-direction: column; gap: 10px; }
@@ -360,10 +204,266 @@
             header h1 { font-size: 28px; }
             section { padding: 60px 4%; }
             .section-title { font-size: 26px; margin-bottom: 30px; }
-            .founder-prominent-card { padding: 30px 20px; }
-            .founder-prominent-card img { width: 150px; height: 150px; }
-            .directors-single-row { grid-template-columns: 1fr; }
+            .directors-dual-grid { grid-template-columns: 1fr; }
             .portal-section { padding: 25px 15px; }
         }
     </style>
 </head>
+<body>
+
+    <div class="header-wrapper">
+        <div class="top-bar">
+            <a href="mailto:vilascivil2@gmail.com"><span class="top-icon">✉</span> vilascivil2@gmail.com</a>
+            <a href="tel:+919948825210"><span class="top-icon">📞</span> +91 99488 25210</a>
+        </div>
+
+        <nav>
+            <div class="logo-area">
+                <img src="logo.png" alt="VR Designs Logo">
+                <div class="logo-text-group">
+                    <span class="company-title">VR Designs India Pvt Ltd</span>
+                    <span class="company-tagline">Shaping Ideas Into Reality</span>
+                </div>
+            </div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#directors">Board of Directors</a></li>
+                <li><a href="#careers">Careers</a></li>
+                <li><a href="#portal" class="portal-btn">Client Portal</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <header id="home">
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="intro.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Delivering High-Precision Engineering Solutions</h1>
+            <p class="sub-desc">Specialized in Building Information Modeling (BIM), Advanced Surveying, Structural Design, and Architectural Excellence.</p>
+            <a href="#portal" class="btn">Client Service Portal & Pay</a>
+        </div>
+    </header>
+
+    <section id="about">
+        <h2 class="section-title">About Us</h2>
+        <div class="about-box">
+            <p>
+                <strong style="color: var(--primary);">VR Designs India Pvt Ltd</strong> provides BIM, civil, structural, architectural and survey-related design services. We focus on practical, accurate and coordinated solutions for construction and infrastructure projects.
+            </p>
+        </div>
+    </section>
+
+    <section id="services">
+        <h2 class="section-title">Our Comprehensive Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Advanced Surveying & Geospatial</h3>
+                <p>High-accuracy ground surveying and layout solutions utilizing state-of-the-art equipment:</p>
+                <ul>
+                    <li>Layout Surveys & Plot Demarcation</li>
+                    <li>Column & Footing Marking</li>
+                    <li>Road Leveling & Earthwork Profiling</li>
+                    <li>Total Station Precision Surveys</li>
+                    <li>DGPS (Differential GPS) Satellite Mapping</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h3>BIM Modeling (Revit)</h3>
+                <p>Comprehensive Building Information Modeling solutions to streamline construction workflow:</p>
+                <ul>
+                    <li>3D Parametric Architectural & Structural Modeling</li>
+                    <li>Multi-discipline Clash Detection & Coordination</li>
+                    <li>Scan-to-BIM & Point Cloud Integration</li>
+                    <li>Detailed Shop Drawings & Material Takeoffs</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h3>Architectural & Structural Design</h3>
+                <p>Innovative and safe structural planning tailored for residential, commercial, and industrial projects:</p>
+                <ul>
+                    <li>Concept to Detailed Architectural Planning</li>
+                    <li>RCC & Steel Structural Design Calculations</li>
+                    <li>Structural Dynamics & Safety Compliance</li>
+                    <li>Estimation, Costing & Execution Supervision</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2 Directors Leadership Section -->
+    <section id="directors">
+        <h2 class="section-title">Board of Directors</h2>
+        <div class="directors-dual-grid">
+            
+            <!-- 1. Ramtenki Vilas (Founder & Managing Director) -->
+            <div class="director-dual-card founder-card">
+                <span class="founder-badge">Founder</span>
+                <img src="profile-pic.jpeg" alt="Ramtenki Vilas">
+                <h3>Ramtenki Vilas</h3>
+                <div class="quals">(D.C.E, B.TECH, M.TECH)</div>
+                <div class="role">Founder & Managing Director</div>
+                <p class="desc">
+                    Driving the core technical vision, engineering standards, and innovation roadmap of VR Designs India Pvt Ltd. Specialized in Building Information Modeling (BIM), advanced surveying technologies, and high-precision structural design solutions.
+                </p>
+            </div>
+
+            <!-- 2. Meka Harish (Director – Business Strategy & Real Estate Operations) -->
+            <div class="director-dual-card">
+                <span class="founder-badge" style="background: rgba(56, 189, 248, 0.2); color: var(--primary); border: 1px solid var(--primary);">Director</span>
+                <img src="meka-harish.jpeg" alt="Meka Harish">
+                <h3>Meka Harish</h3>
+                <div class="role">Director – Business Strategy & Real Estate Operations</div>
+                <p class="desc">
+                    Leading strategic business growth, developer partnerships, real estate investment advisory, and corporate client relations across infrastructure and commercial construction sectors to accelerate company expansion.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="careers">
+        <h2 class="section-title">Careers</h2>
+        <p style="text-align: center; color: #94a3b8; max-width: 700px; margin: 0 auto 40px; font-size: 15px;">
+            Join our growing team of engineering and BIM professionals at <strong style="color: var(--primary);">VR Designs India Pvt Ltd</strong>. Explore current opportunities below:
+        </p>
+        <div class="careers-grid">
+            <div class="career-card">
+                <span class="badge">Actively Hiring</span>
+                <h3>BIM Engineer / Modeler (Revit)</h3>
+                <div class="job-meta">📍 T-Hub, Gachibouli, Hyderabad | Full-Time</div>
+                <p>Looking for experienced BIM professionals skilled in Autodesk Revit architecture & structural modeling.</p>
+                <ul>
+                    <li>Minimum 1-3 years experience in Revit BIM modeling.</li>
+                    <li>Strong knowledge in clash detection & family creation.</li>
+                    <li>Scan-to-BIM & point cloud processing experience is a plus.</li>
+                </ul>
+                <a href="mailto:vilascivil2@gmail.com?subject=Job Application: BIM Engineer - [Your Name]" class="apply-btn">Apply via Email</a>
+            </div>
+
+            <div class="career-card">
+                <span class="badge">Actively Hiring</span>
+                <h3>Advanced Survey Engineer</h3>
+                <div class="job-meta">📍 Hyderabad & Site Locations | Full-Time</div>
+                <p>Seeking skilled survey engineers proficient in high-precision ground layout and geospatial mapping.</p>
+                <ul>
+                    <li>Expertise in Total Station and DGPS equipment operation.</li>
+                    <li>Ability to handle large-scale layout surveys and leveling.</li>
+                    <li>Diploma or Degree in Civil Engineering (D.C.E / B.Tech).</li>
+                </ul>
+                <a href="mailto:vilascivil2@gmail.com?subject=Job Application: Survey Engineer - [Your Name]" class="apply-btn">Apply via Email</a>
+            </div>
+
+            <div class="career-card">
+                <span class="badge">Actively Hiring</span>
+                <h3>Structural Design Engineer</h3>
+                <div class="job-meta">📍 T-Hub, Gachibouli, Hyderabad | Full-Time</div>
+                <p>Looking for structural engineers capable of handling analysis, calculations, and execution drawings.</p>
+                <ul>
+                    <li>Proficiency in RCC and Steel structural calculations.</li>
+                    <li>B.Tech / M.Tech in Structural Engineering.</li>
+                    <li>Familiarity with STAAD.Pro, AutoCAD, and Revit Structure.</li>
+                </ul>
+                <a href="mailto:vilascivil2@gmail.com?subject=Job Application: Structural Engineer - [Your Name]" class="apply-btn">Apply via Email</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="portal">
+        <h2 class="section-title">Client Service Portal & Online Payment</h2>
+        <div class="portal-section">
+            <p style="color: #94a3b8; margin-bottom: 25px; font-size: 15px;">
+                Submit your service inquiry below, or proceed directly to UPI payment for confirmed projects.
+            </p>
+            <div id="vr-success" class="success-banner">
+                ✅ Inquiry prepared successfully! Opening your email client to send details...
+            </div>
+
+            <form id="vr-portal-form" class="portal-form" onsubmit="submitVrForm(event)">
+                <div class="form-group">
+                    <label for="c-name">Full Name / Company Name</label>
+                    <input type="text" id="c-name" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="c-email">Email Address</label>
+                    <input type="email" id="c-email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="c-phone">Phone Number</label>
+                    <input type="tel" id="c-phone" placeholder="Enter your phone number" required>
+                </div>
+                <div class="form-group">
+                    <label for="c-service">Select Required Service</label>
+                    <select id="c-service" required>
+                        <option value="">-- Choose a Service --</option>
+                        <option value="BIM Modeling">BIM Modeling (Revit)</option>
+                        <option value="Advanced Surveying">Advanced Surveying & DGPS / Total Station</option>
+                        <option value="Structural Design">Architectural & Structural Design</option>
+                        <option value="Other Consultation">General Engineering Consultation</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="c-msg">Project Details / Requirements</label>
+                    <textarea id="c-msg" rows="4" placeholder="Briefly describe your project requirements..." required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Submit Service Request</button>
+            </form>
+
+            <div class="payment-divider">
+                <p style="color: #cbd5e1; margin-bottom: 12px; font-size: 15px; font-weight: 500;">Direct UPI Payment for Consultations & Projects:</p>
+                <div class="upi-box">
+                    UPI ID: <span class="upi-id">ramtenkivilas001@oksbi</span>
+                </div>
+                <a href="upi://pay?pa=ramtenkivilas001@oksbi&pn=VR%20Designs%20India%20Pvt%20Ltd&cu=INR" class="payment-btn">💳 Pay Now via UPI Apps (GPay / PhonePe / Paytm)</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="contact-box">
+            <p>Email: <a href="mailto:vilascivil2@gmail.com">vilascivil2@gmail.com</a></p>
+            <p>Phone: <a href="tel:+919948825210">+91 99488 25210</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-address">
+            <span>Corporate Office:</span> Plot No 1/C, Sy No 83/1, Raidurgam, Knowledge City Road, Hyderabad, Telangana 500081 (T-Hub Phase 1)
+        </div>
+        <div class="footer-address">
+            <span>Registered Office:</span> H.No. 2-45, Village: Dhorpalli, Mandal: Sirpur Town, District: Komrambhim Asifabad, PIN: 504299
+        </div>
+        <div class="copyright">&copy; 2026 VR Designs India Pvt Ltd. All Rights Reserved.</div>
+    </footer>
+
+    <script>
+        function submitVrForm(e) {
+            e.preventDefault();
+            const name = document.getElementById('c-name').value;
+            const email = document.getElementById('c-email').value;
+            const phone = document.getElementById('c-phone').value;
+            const service = document.getElementById('c-service').value;
+            const msg = document.getElementById('c-msg').value;
+
+            const subject = encodeURIComponent("New Client Inquiry: " + service + " - " + name);
+            const body = encodeURIComponent("Name: " + name + "\nEmail: " + email + "\nPhone: " + phone + "\nService: " + service + "\n\nRequirements:\n" + msg);
+
+            document.getElementById('vr-success').style.display = 'block';
+            document.getElementById('vr-portal-form').reset();
+
+            setTimeout(function() {
+                window.location.href = "mailto:vilascivil2@gmail.com?subject=" + subject + "&body=" + body;
+            }, 1200);
+        }
+    </script>
+
+</body>
+</html>
