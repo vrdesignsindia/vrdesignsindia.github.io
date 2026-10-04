@@ -8,7 +8,7 @@
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; scroll-behavior: smooth; }
         body { background: #0f172a; color: #f8fafc; line-height: 1.6; overflow-x: hidden; }
         
-        /* Fixed Header Wrapper (Top Bar + Nav) */
+        /* Fixed Header Wrapper */
         .header-wrapper {
             position: fixed;
             top: 0;
@@ -24,7 +24,7 @@
             display: flex;
             justify-content: flex-end;
             align-items: center;
-            gap: 20px;
+            gap: 25px;
             font-size: 13px;
             border-bottom: 1px solid #1e293b;
         }
@@ -46,22 +46,39 @@
             justify-content: space-between; 
             align-items: center; 
             background: rgba(15, 23, 42, 0.95); 
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(12px);
             padding: 12px 5%; 
             border-bottom: 1px solid #1e293b; 
         }
-        .logo-area { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+        .logo-area { display: flex; align-items: center; gap: 12px; }
         .logo-area img { height: 42px; width: auto; object-fit: contain; }
         .logo-text-group { display: flex; flex-direction: column; justify-content: center; }
-        .logo-title { color: #d4af37; font-size: 20px; font-weight: 700; letter-spacing: 0.5px; line-height: 1.2; }
-        .logo-tagline { color: #ffffff; font-size: 10px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; margin-top: 3px; opacity: 0.9; }
+        
+        .logo-area .company-title { 
+            color: #d4af37; 
+            font-size: 19px; 
+            font-weight: 800; 
+            letter-spacing: 0.5px; 
+            line-height: 1.2; 
+            display: block;
+        }
+        .logo-area .company-tagline { 
+            color: #ffffff !important; 
+            font-size: 10px !important; 
+            font-weight: 600 !important; 
+            letter-spacing: 2px !important; 
+            text-transform: uppercase; 
+            margin-top: 3px;
+            display: block;
+            opacity: 0.9;
+        }
         
         nav ul { list-style: none; display: flex; gap: 18px; align-items: center; flex-wrap: wrap; }
         nav ul li a { color: #cbd5e1; text-decoration: none; font-size: 14px; font-weight: 500; transition: 0.3s; }
         nav ul li a:hover { color: #d4af37; }
-        .portal-btn { background: #d4af37 !important; color: #000 !important; padding: 6px 14px; border-radius: 4px; font-weight: bold; }
+        .portal-btn { background: #d4af37 !important; color: #000 !important; padding: 7px 14px; border-radius: 4px; font-weight: bold; }
 
-        /* Hero Section with Background Video */
+        /* Hero Section */
         header { 
             position: relative;
             min-height: 100vh; 
@@ -87,50 +104,44 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(rgba(15,23,42,0.82), rgba(15,23,42,0.94));
+            background: linear-gradient(rgba(15,23,42,0.82), rgba(15,23,42,0.95));
             z-index: 2;
         }
         .hero-content {
             position: relative;
             z-index: 3;
-            max-width: 920px;
+            max-width: 900px;
         }
         header h1 { 
             font-size: 42px; 
-            color: #ffffff; 
-            margin-bottom: 18px; 
+            color: #ffffff !important; 
+            margin-bottom: 16px; 
             font-weight: 800; 
-            letter-spacing: 0.5px;
-            line-height: 1.3;
+            letter-spacing: 0.8px;
             text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
-        }
-        header h1 span {
-            color: #d4af37;
         }
         header .sub-desc { 
             font-size: 16px; 
-            color: #cbd5e1; 
-            margin-bottom: 32px; 
+            color: #94a3b8; 
+            margin-bottom: 30px; 
             max-width: 750px; 
             margin-left: auto; 
             margin-right: auto; 
-            line-height: 1.7;
         }
         .btn { 
             background: #d4af37; 
             color: #000; 
-            padding: 13px 32px; 
+            padding: 12px 32px; 
             border-radius: 6px; 
             font-weight: bold; 
             text-decoration: none; 
             transition: 0.3s; 
             display: inline-block; 
-            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
         }
-        .btn:hover { background: #b4912b; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4); }
+        .btn:hover { background: #b4912b; transform: translateY(-2px); }
 
-        /* Sections General */
-        section { padding: 85px 5%; }
+        /* General Sections */
+        section { padding: 85px 6%; }
         .section-title { 
             text-align: center; 
             font-size: 32px; 
@@ -158,42 +169,110 @@
 
         /* Services Grid */
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
-        .service-card { background: #1e293b; padding: 30px; border-radius: 12px; border: 1px solid #334155; transition: 0.3s; }
+        .service-card { background: #1e293b; padding: 32px; border-radius: 12px; border: 1px solid #334155; transition: 0.3s; }
         .service-card:hover { transform: translateY(-5px); border-color: #d4af37; box-shadow: 0 10px 25px rgba(212,175,55,0.1); }
         .service-card h3 { font-size: 21px; margin-bottom: 15px; color: #fff; border-bottom: 2px solid #334155; padding-bottom: 10px; }
         .service-card p { color: #94a3b8; font-size: 14px; margin-bottom: 12px; }
         .service-card ul { list-style: disc; padding-left: 20px; color: #cbd5e1; font-size: 14px; }
         .service-card ul li { margin-bottom: 6px; }
 
-        /* Founder Section */
-        .founder-container { display: flex; justify-content: center; align-items: center; }
-        .founder-card { background: #1e293b; border-radius: 15px; padding: 40px 25px; max-width: 480px; width: 100%; text-align: center; border: 1px solid #334155; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-        .founder-card img { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; margin-bottom: 20px; border: 4px solid #d4af37; }
-        .founder-card h3 { font-size: 24px; color: #fff; margin-bottom: 4px; }
-        .founder-card .quals { font-size: 14px; color: #cbd5e1; margin-bottom: 10px; font-weight: 500; }
-        .founder-card .role { font-size: 16px; color: #d4af37; font-weight: bold; margin-bottom: 15px; }
-        .founder-card .desc { color: #94a3b8; font-size: 14px; line-height: 1.6; }
+        /* Board of Directors Section */
+        .founder-top-wrapper {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 45px;
+        }
+        .founder-prominent-card {
+            background: linear-gradient(180deg, #1e293b 0%, #172033 100%);
+            border-radius: 18px;
+            padding: 42px 30px;
+            max-width: 460px;
+            width: 100%;
+            text-align: center;
+            border: 2px solid #d4af37;
+            box-shadow: 0 14px 35px rgba(0,0,0,0.5), 0 0 20px rgba(212, 175, 55, 0.15);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: 0.3s;
+        }
+        .founder-prominent-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 40px rgba(212, 175, 55, 0.25);
+        }
+        .founder-badge {
+            background: #d4af37;
+            color: #000;
+            font-size: 11px;
+            font-weight: 800;
+            padding: 5px 16px;
+            border-radius: 20px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+        .founder-prominent-card img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 18px;
+            border: 4px solid #d4af37;
+        }
+        .founder-prominent-card h3 { font-size: 24px; color: #fff; margin-bottom: 4px; }
+        .founder-prominent-card .quals { font-size: 13.5px; color: #cbd5e1; margin-bottom: 8px; font-weight: 500; }
+        .founder-prominent-card .role { font-size: 16px; color: #d4af37; font-weight: bold; margin-bottom: 14px; }
+        .founder-prominent-card .desc { color: #94a3b8; font-size: 14px; line-height: 1.6; }
 
-        /* Staff Grid Section */
-        .staff-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; }
-        .staff-card { background: #1e293b; border-radius: 15px; padding: 30px 20px; text-align: center; border: 1px solid #334155; box-shadow: 0 10px 30px rgba(0,0,0,0.3); transition: 0.3s; }
-        .staff-card:hover { transform: translateY(-5px); border-color: #d4af37; box-shadow: 0 10px 25px rgba(212,175,55,0.1); }
-        .staff-card img { width: 140px; height: 140px; border-radius: 50%; object-fit: cover; margin-bottom: 20px; border: 3px solid #d4af37; }
-        .staff-card h3 { font-size: 21px; color: #fff; margin-bottom: 4px; }
-        .staff-card .quals { font-size: 13px; color: #cbd5e1; margin-bottom: 8px; font-weight: 500; }
-        .staff-card .role { font-size: 15px; color: #d4af37; font-weight: bold; margin-bottom: 12px; }
-        .staff-card .desc { color: #94a3b8; font-size: 13px; line-height: 1.6; }
+        /* 4 Directors in 1 Row */
+        .directors-single-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+        .director-card-sub {
+            background: #1e293b;
+            border-radius: 14px;
+            padding: 30px 18px;
+            text-align: center;
+            border: 1px solid #334155;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: 0.3s;
+        }
+        .director-card-sub:hover {
+            transform: translateY(-5px);
+            border-color: #d4af37;
+            box-shadow: 0 12px 30px rgba(212, 175, 55, 0.15);
+        }
+        .director-card-sub img {
+            width: 135px;
+            height: 135px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 16px;
+            border: 3px solid #d4af37;
+        }
+        .director-card-sub h3 { font-size: 19px; color: #fff; margin-bottom: 4px; }
+        .director-card-sub .quals { font-size: 12.5px; color: #cbd5e1; margin-bottom: 6px; font-weight: 500; }
+        .director-card-sub .role { font-size: 14px; color: #d4af37; font-weight: bold; margin-bottom: 12px; }
+        .director-card-sub .desc { color: #94a3b8; font-size: 13px; line-height: 1.55; }
 
-        /* Careers / Job Vacancies Section */
+        /* Careers Section */
         .careers-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-bottom: 40px; }
-        .career-card { background: #1e293b; border-radius: 12px; padding: 30px; border: 1px solid #334155; box-shadow: 0 10px 30px rgba(0,0,0,0.3); transition: 0.3s; }
+        .career-card { background: #1e293b; border-radius: 12px; padding: 30px; border: 1px solid #334155; box-shadow: 0 10px 30px rgba(0,0,0,0.3); transition: 0.3s; position: relative; }
         .career-card:hover { border-color: #d4af37; transform: translateY(-5px); }
-        .career-card h3 { font-size: 21px; color: #d4af37; margin-bottom: 10px; }
+        .badge { display: inline-block; background: rgba(16, 185, 129, 0.15); color: #10b981; font-size: 12px; font-weight: bold; padding: 4px 10px; border-radius: 20px; border: 1px solid #10b981; margin-bottom: 12px; }
+        .career-card h3 { font-size: 21px; color: #d4af37; margin-bottom: 8px; }
         .career-card .job-meta { font-size: 13px; color: #94a3b8; margin-bottom: 15px; font-weight: 500; }
         .career-card p { font-size: 14px; color: #cbd5e1; margin-bottom: 15px; }
         .career-card ul { list-style: disc; padding-left: 20px; color: #94a3b8; font-size: 13px; margin-bottom: 20px; }
         .career-card ul li { margin-bottom: 5px; }
-        .apply-btn { background: #d4af37; color: #000; padding: 10px 20px; border-radius: 5px; font-size: 14px; font-weight: bold; text-decoration: none; display: inline-block; transition: 0.3s; }
+        .apply-btn { background: #d4af37; color: #000; padding: 10px 22px; border-radius: 5px; font-size: 14px; font-weight: bold; text-decoration: none; display: inline-block; transition: 0.3s; }
         .apply-btn:hover { background: #b4912b; }
 
         /* Client Portal & Online Payment Section */
@@ -207,7 +286,7 @@
         .submit-btn:hover { background: #b4912b; }
         .success-banner { display: none; background: #065f46; color: #d1fae5; padding: 14px; border-radius: 6px; margin-bottom: 20px; font-weight: 600; font-size: 14px; }
 
-        /* UPI Online Payment Styling */
+        /* UPI Payment */
         .payment-divider { margin: 30px 0 15px; border-top: 1px solid #334155; padding-top: 25px; }
         .upi-box { background: #020617; padding: 14px; border-radius: 8px; border: 1px solid #334155; margin-bottom: 15px; font-size: 14px; color: #cbd5e1; word-break: break-all; }
         .upi-id { color: #d4af37; font-weight: bold; font-size: 16px; letter-spacing: 0.5px; }
@@ -219,52 +298,57 @@
         .contact-box p { font-size: 17px; margin-bottom: 12px; color: #cbd5e1; }
         .contact-box a { color: #d4af37; text-decoration: none; font-weight: bold; word-break: break-all; }
 
-        /* Footer with Single Line Professional Addresses & Copyright */
+        /* Footer */
         footer { background: #020617; text-align: center; padding: 30px 5%; color: #94a3b8; border-top: 1px solid #1e293b; font-size: 13px; line-height: 1.8; }
         footer .footer-address { margin-bottom: 8px; font-size: 12px; color: #cbd5e1; }
         footer .footer-address span { color: #d4af37; font-weight: 600; }
         footer .copyright { margin-top: 12px; font-weight: 600; color: #94a3b8; font-size: 13px; }
 
-        /* Mobile Responsive Media Queries */
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .directors-single-row {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
         @media (max-width: 768px) {
             .top-bar { display: none; }
             nav { padding: 12px 4%; flex-direction: column; gap: 10px; }
             nav ul { gap: 10px; justify-content: center; font-size: 13px; }
             header { padding: 140px 15px 40px; }
-            header h1 { font-size: 28px; line-height: 1.3; }
+            header h1 { font-size: 28px; }
             section { padding: 60px 4%; }
             .section-title { font-size: 26px; margin-bottom: 30px; }
-            .founder-card { padding: 30px 20px; }
-            .founder-card img { width: 170px; height: 170px; }
+            .founder-prominent-card { padding: 30px 20px; }
+            .founder-prominent-card img { width: 150px; height: 150px; }
+            .directors-single-row {
+                grid-template-columns: 1fr;
+            }
             .portal-section { padding: 25px 15px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header Area (Top Contact Bar + Nav) -->
+    <!-- Header Area -->
     <div class="header-wrapper">
-        <!-- Top Bar -->
         <div class="top-bar">
             <a href="mailto:vilascivil2@gmail.com">✉ vilascivil2@gmail.com</a>
             <a href="tel:+919948825210">📞 +91 99488 25210</a>
         </div>
 
-        <!-- Navigation Bar -->
         <nav>
             <div class="logo-area">
                 <img src="logo.png" alt="VR Designs Logo">
                 <div class="logo-text-group">
-                    <span class="logo-title">VR Designs India Pvt Ltd</span>
-                    <span class="logo-tagline">Shaping Ideas Into Reality</span>
+                    <span class="company-title">VR Designs India Pvt Ltd</span>
+                    <span class="company-tagline">Shaping Ideas Into Reality</span>
                 </div>
             </div>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#founder">Founder</a></li>
-                <li><a href="#staff">Staff</a></li>
+                <li><a href="#directors">Board of Directors</a></li>
                 <li><a href="#careers">Careers</a></li>
                 <li><a href="#portal" class="portal-btn">Client Portal</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -272,25 +356,22 @@
         </nav>
     </div>
 
-    <!-- Hero Section with Background Video -->
+    <!-- Hero Section -->
     <header id="home">
-        <!-- Background Video -->
         <video autoplay muted loop playsinline class="hero-video">
             <source src="intro.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        <!-- Dark Overlay for text clarity -->
         <div class="hero-overlay"></div>
         
-        <!-- Hero Text Content -->
         <div class="hero-content">
-            <h1>Delivering High-Precision <span>Engineering Solutions</span></h1>
+            <h1>Delivering High-Precision Engineering Solutions</h1>
             <p class="sub-desc">Specialized in Building Information Modeling (BIM), Advanced Surveying, Structural Design, and Architectural Excellence.</p>
             <a href="#portal" class="btn">Client Service Portal & Pay</a>
         </div>
     </header>
 
-    <!-- About Us Section -->
+    <!-- About Section -->
     <section id="about">
         <h2 class="section-title">About Us</h2>
         <div class="about-box">
@@ -304,8 +385,6 @@
     <section id="services">
         <h2 class="section-title">Our Comprehensive Services</h2>
         <div class="services-grid">
-            
-            <!-- Surveying Services -->
             <div class="service-card">
                 <h3>Advanced Surveying & Geospatial</h3>
                 <p>High-accuracy ground surveying and layout solutions utilizing state-of-the-art equipment:</p>
@@ -318,7 +397,6 @@
                 </ul>
             </div>
 
-            <!-- BIM Services -->
             <div class="service-card">
                 <h3>BIM Modeling (Revit)</h3>
                 <p>Comprehensive Building Information Modeling solutions to streamline construction workflow:</p>
@@ -330,7 +408,6 @@
                 </ul>
             </div>
 
-            <!-- Architectural & Structural Design -->
             <div class="service-card">
                 <h3>Architectural & Structural Design</h3>
                 <p>Innovative and safe structural planning tailored for residential, commercial, and industrial projects:</p>
@@ -341,90 +418,97 @@
                     <li>Estimation, Costing & Execution Supervision</li>
                 </ul>
             </div>
-
         </div>
     </section>
 
-    <!-- Founder Details Section -->
-    <section id="founder">
-        <h2 class="section-title">Founder Details</h2>
-        <div class="founder-container">
-            <div class="founder-card">
+    <!-- Board of Directors Section -->
+    <section id="directors">
+        <h2 class="section-title">Board of Directors</h2>
+        
+        <!-- Founder Card at Top Center -->
+        <div class="founder-top-wrapper">
+            <div class="founder-prominent-card">
+                <span class="founder-badge">Founder</span>
                 <img src="profile-pic.jpeg" alt="Ramtenki Vilas">
                 <h3>Ramtenki Vilas</h3>
                 <div class="quals">(D.C.E, B.TECH, M.TECH)</div>
-                <div class="role">Founder & BIM / Structural Professional</div>
+                <div class="role">Founder & Managing Director</div>
                 <p class="desc">
-                    Expertise in Building Information Modeling (BIM), structural engineering, advanced surveying, and architectural modeling solutions. Dedicated to delivering high-precision engineering projects with uncompromising quality.
+                    Driving the vision and technical excellence of VR Designs India Pvt Ltd. Expertise in Building Information Modeling (BIM), structural engineering, advanced surveying, and turnkey engineering solutions.
                 </p>
             </div>
         </div>
-    </section>
 
-    <!-- Staff Section -->
-    <section id="staff">
-        <h2 class="section-title">Our Expert Team</h2>
-        <div class="staff-grid">
-            
-            <!-- Staff Member 1 -->
-            <div class="staff-card">
-                <img src="sulthan-venkatesh.jpeg" alt="Sulthan Venkatesh">
-                <h3>Sulthan Venkatesh</h3>
-                <div class="quals">(B.TECH, CIVIL)</div>
-                <div class="role">Senior BIM Modeler</div>
+        <!-- 4 Directors in 1 Single Line Row -->
+        <div class="directors-single-row">
+            <!-- 1st: Meka Harish -->
+            <div class="director-card-sub">
+                <img src="meka-harish.jpeg" alt="Meka Harish">
+                <h3>Meka Harish</h3>
+                <div class="quals">(DIRECTOR)</div>
+                <div class="role">Director</div>
                 <p class="desc">
-                    Specialized in Revit 3D parametric modeling, clash detection, and multidisciplinary coordination for engineering projects.
+                    Overseeing strategic planning, project execution, and client partnerships to drive scalable growth and operational excellence across all engineering deliverables.
                 </p>
             </div>
 
-            <!-- Staff Member 2 -->
-            <div class="staff-card">
+            <!-- 2nd: Ramavath Suresh -->
+            <div class="director-card-sub">
+                <img src="ramavath-suresh.jpg" alt="Ramavath Suresh">
+                <h3>Ramavath Suresh</h3>
+                <div class="quals">(B.TECH)</div>
+                <div class="role">Director & Structural Engineering Lead</div>
+                <p class="desc">
+                    Heading structural analysis, RCC and steel design compliance, dynamic structural calculations, and cost-effective structural engineering methodologies.
+                </p>
+            </div>
+
+            <!-- 3rd: Sulthan Venkatesh -->
+            <div class="director-card-sub">
+                <img src="sulthan-venkatesh.jpg" alt="Sulthan Venkatesh">
+                <h3>Sulthan Venkatesh</h3>
+                <div class="quals">(B.TECH, CIVIL)</div>
+                <div class="role">Director & Senior BIM Lead</div>
+                <p class="desc">
+                    Directing BIM implementation, Revit 3D parametric workflows, multidisciplinary coordination, and quality assurance across large-scale commercial and residential projects.
+                </p>
+            </div>
+
+            <!-- 4th: Shiva Prasad -->
+            <div class="director-card-sub">
                 <img src="shiva-prasad.jpeg" alt="Shiva Prasad">
                 <h3>Shiva Prasad</h3>
                 <div class="quals">(D.C.E)</div>
-                <div class="role">Advanced Survey Engineer</div>
+                <div class="role">Director & Advanced Survey Lead</div>
                 <p class="desc">
-                    Expert in Total Station and DGPS precision land surveying, layout marking, and site execution monitoring.
+                    Leading geospatial and ground surveying operations with Total Station and DGPS technologies, ensuring high accuracy layout demarcation and topographic mapping.
                 </p>
             </div>
-
-            <!-- Staff Member 3 -->
-            <div class="staff-card">
-                <img src="ramavath-suresh.jpeg" alt="Ramavath Suresh">
-                <h3>Ramavath Suresh</h3>
-                <div class="quals">(B.TECH)</div>
-                <div class="role">Structural Design Engineer</div>
-                <p class="desc">
-                    Experienced in RCC & steel structural analysis, detailed estimations, and structural safety compliance checks.
-                </p>
-            </div>
-
         </div>
     </section>
 
-    <!-- Careers / Job Vacancies Section -->
+    <!-- Careers Section -->
     <section id="careers">
-        <h2 class="section-title">Career Opportunities</h2>
+        <h2 class="section-title">Careers</h2>
         <p style="text-align: center; color: #94a3b8; max-width: 700px; margin: 0 auto 40px; font-size: 15px;">
-            Join our growing team of engineering and BIM professionals at <strong style="color: #d4af37;">VR Designs India Pvt Ltd</strong>. Explore open positions below:
+            Join our growing team of engineering and BIM professionals at <strong style="color: #d4af37;">VR Designs India Pvt Ltd</strong>. Explore current opportunities below:
         </p>
         <div class="careers-grid">
-            
-            <!-- Job Opening 1 -->
             <div class="career-card">
+                <span class="badge">Actively Hiring</span>
                 <h3>BIM Engineer / Modeler (Revit)</h3>
                 <div class="job-meta">📍 T-Hub, Gachibouli, Hyderabad | Full-Time</div>
-                <p>We are looking for experienced BIM professionals skilled in Autodesk Revit architecture & structural modeling.</p>
+                <p>Looking for experienced BIM professionals skilled in Autodesk Revit architecture & structural modeling.</p>
                 <ul>
                     <li>Minimum 1-3 years experience in Revit BIM modeling.</li>
                     <li>Strong knowledge in clash detection & family creation.</li>
                     <li>Scan-to-BIM & point cloud processing experience is a plus.</li>
                 </ul>
-                <a href="mailto:vilascivil2@gmail.com?subject=Job Application: BIM Engineer - [Your Name]" class="apply-btn">Apply Now via Email</a>
+                <a href="mailto:vilascivil2@gmail.com?subject=Job Application: BIM Engineer - [Your Name]" class="apply-btn">Apply via Email</a>
             </div>
 
-            <!-- Job Opening 2 -->
             <div class="career-card">
+                <span class="badge">Actively Hiring</span>
                 <h3>Advanced Survey Engineer</h3>
                 <div class="job-meta">📍 Hyderabad & Site Locations | Full-Time</div>
                 <p>Seeking skilled survey engineers proficient in high-precision ground layout and geospatial mapping.</p>
@@ -433,11 +517,11 @@
                     <li>Ability to handle large-scale layout surveys and leveling.</li>
                     <li>Diploma or Degree in Civil Engineering (D.C.E / B.Tech).</li>
                 </ul>
-                <a href="mailto:vilascivil2@gmail.com?subject=Job Application: Survey Engineer - [Your Name]" class="apply-btn">Apply Now via Email</a>
+                <a href="mailto:vilascivil2@gmail.com?subject=Job Application: Survey Engineer - [Your Name]" class="apply-btn">Apply via Email</a>
             </div>
 
-            <!-- Job Opening 3 -->
             <div class="career-card">
+                <span class="badge">Actively Hiring</span>
                 <h3>Structural Design Engineer</h3>
                 <div class="job-meta">📍 T-Hub, Gachibouli, Hyderabad | Full-Time</div>
                 <p>Looking for structural engineers capable of handling analysis, calculations, and execution drawings.</p>
@@ -446,13 +530,12 @@
                     <li>B.Tech / M.Tech in Structural Engineering.</li>
                     <li>Familiarity with STAAD.Pro, AutoCAD, and Revit Structure.</li>
                 </ul>
-                <a href="mailto:vilascivil2@gmail.com?subject=Job Application: Structural Engineer - [Your Name]" class="apply-btn">Apply Now via Email</a>
+                <a href="mailto:vilascivil2@gmail.com?subject=Job Application: Structural Engineer - [Your Name]" class="apply-btn">Apply via Email</a>
             </div>
-
         </div>
     </section>
 
-    <!-- Client Portal / Service Access & UPI Payment Section -->
+    <!-- Client Portal Section -->
     <section id="portal">
         <h2 class="section-title">Client Service Portal & Online Payment</h2>
         <div class="portal-section">
@@ -460,7 +543,6 @@
                 Submit your service inquiry below, or proceed directly to UPI payment for confirmed projects.
             </p>
             
-            <!-- Success Message Box -->
             <div id="vr-success" class="success-banner">
                 ✅ Inquiry prepared successfully! Opening your email client to send details...
             </div>
@@ -495,7 +577,6 @@
                 <button type="submit" class="submit-btn">Submit Service Request</button>
             </form>
 
-            <!-- UPI Payment Integration Section -->
             <div class="payment-divider">
                 <p style="color: #cbd5e1; margin-bottom: 12px; font-size: 15px; font-weight: 500;">Direct UPI Payment for Consultations & Projects:</p>
                 <div class="upi-box">
@@ -515,7 +596,7 @@
         </div>
     </section>
 
-    <!-- Footer with Single Line Professional Addresses & Copyright -->
+    <!-- Footer -->
     <footer>
         <div class="footer-address">
             <span>Corporate Office:</span> Plot No 1/C, Sy No 83/1, Raidurgam, Knowledge City Road, Hyderabad, Telangana 500081 (T-Hub Phase 1)
